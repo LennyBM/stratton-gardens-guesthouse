@@ -1,11 +1,41 @@
 :root {
-  --brand-primary: #3F6B4C;
-  --brand-accent: #C9A14A;
-  --brand-ink: #241c16;
-  --brand-bg: #FBF7F0;
-  --brand-surface: #FFFFFF;
+  /* ── identity ──────────────────────────────────────────────────────── */
+  --brand-primary:  #3F6B4C;
+  --brand-cta:      #3F6B4C;   /* booking and call fill. Exempt from accent discipline */
+  --brand-accent:   #C9A14A;   /* interaction and emphasis only. AA large only, never body text */
+  --brand-ink:      #241c16;
   --brand-contrast: #FFFFFF;
-  --brand-muted: #6f6358;
-  --brand-border: #e7ddcf;
-  --brand-hero-overlay: rgba(20,12,6,0.5);
+
+  /* Identity colours as TEXT. Equal to the fill above wherever the fill already
+     clears AA, so most sites carry the same value twice; the amber, olive and
+     magenta brands are darkened only as far as 4.5:1 needs. */
+  --brand-primary-ink: #3F6B4C;   /* 5.2:1 on the worst surface */
+  --brand-accent-ink:  #7E6432;   /* 4.7:1 on the worst surface */
+
+  /* ── surfaces (light, 3 to 5% apart) ─────────────────────────────────────── */
+  --brand-bg:       #FBF7F0;
+  --brand-recessed: #EFEBE4;
+  --brand-surface:  #FFFFFF;
+  --footer-bg:      #241c16;   /* inverted band. Dark in BOTH families, never ink */
+
+  /* ── text roles, measured against --brand-bg ───────────────────────── */
+  --text-primary:   #241c16;   /* 15.7:1 */
+  --text-secondary: #4C443E;   /* 8.9:1 */
+  --text-muted:     #6D6760;   /* 5.2:1 */
+  --text-tertiary:  #88817B;   /* 3.6:1, 24px and above only */
+
+  /* ── on dark ───────────────────────────────────────────────────────── */
+  --text-on-dark:           #FFFFFF;
+  --text-on-dark-secondary: #E8E2D9;
+  --text-on-dark-muted:     #C4BBB0;
+
+  /* ── on the identity band (.hero-typographic fills with --brand-primary) ── */
+  /* Polarity is measured against this exact ground, not assumed from the family. */
+  --text-on-primary:           #FFFFFF;   /* 6.1:1 on --brand-primary */
+  --text-on-primary-secondary: #FCFDFC;
+  --text-on-primary-muted:     #DBE4DE;
+
+  /* ── media grade ───────────────────────────────────────────────────── */
+  --grade-colour:   var(--brand-primary);
+  --grade-opacity:  0.55;
 }
